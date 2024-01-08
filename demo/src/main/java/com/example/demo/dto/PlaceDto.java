@@ -1,13 +1,11 @@
 package com.example.demo.dto;
 
 import com.example.demo.Entity.Place;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Setter
 @Getter
 @ToString
 public class PlaceDto {
@@ -19,9 +17,10 @@ public class PlaceDto {
     private double rating;
     private double axisX;
     private double axisY;
+    private Long size;
 
     public Place toEntity() {
         return new Place(id, categoryId, name, thumbnail,
-                content, rating, axisX, axisY);
+                content, rating, axisX, axisY, size);
     }
 }

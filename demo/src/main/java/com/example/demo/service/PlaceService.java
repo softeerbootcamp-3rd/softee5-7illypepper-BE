@@ -16,14 +16,18 @@ public class PlaceService {
     @Autowired
     private PlaceRepository placeRepository;
 
-    public List<PlaceDto> findSurround(MemberDto dto, double meter) {
+    public List<PlaceDto> findSurround(MemberDto dto, double meter, int small, int big) {
         List<Place> places = placeRepository.findAll();
         List<PlaceDto> dtos = new ArrayList<>();
         Distance now = new Distance(dto.getAxisX(), dto.getAxisY());
         for(Place p : places) {
             Distance d = new Distance(p.getAxisX(), p.getAxisY());
-            if(now.getDist(now.getAxisX(), now.getAxisY(), d.getAxisX(), d.getAxisY())  > (double)meter) continue;
-            dtos.add(p.toDto());
+            double dist = now.getDist(now.getAxisX(), now.getAxisY(), d.getAxisX(), d.getAxisY());
+            if(dist  > (double)meter) continue;
+            PlaceDto pdto = p.toDto();
+            if(dist <= (double)small) pdto.setSize(1L);
+            else pdto.setSize(0L);
+            dtos.add(pdto);
         }
         return dtos;
     }

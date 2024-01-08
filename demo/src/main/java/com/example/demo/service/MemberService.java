@@ -1,7 +1,11 @@
 package com.example.demo.service;
 
+import com.example.demo.Entity.Category;
 import com.example.demo.Entity.Member;
+import com.example.demo.Entity.MemberCategory;
 import com.example.demo.dto.MemberDto;
+import com.example.demo.repository.CategoryRepository;
+import com.example.demo.repository.MemberCategoryRepository;
 import com.example.demo.repository.MemberRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +18,10 @@ import java.util.List;
 public class MemberService {
     @Autowired
     private MemberRepository memberRepository;
+    @Autowired
+    private MemberCategoryRepository memberCategoryRepository;
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     @Transactional
     public MemberDto create(MemberDto dto) {
@@ -40,5 +48,17 @@ public class MemberService {
         Member member = memberRepository.findById(memberId).orElse(null);
         if(member != null) return member.toDto();
         else return null;
+    }
+
+    public MemberDto favorite(MemberDto dto, List<String> like) {
+        if(dto.getId() == null) return null;
+        Member target = memberRepository.findById(dto.getId()).orElse(null);
+        if(target == null) return null;
+        for(String l : like) {
+            Category c = categoryRepository.findByName(l).orElse(null);
+            if(c == null) return null;
+            memberCategoryRepository.save(new MemberCategory(null, target, c));
+        }
+        return target.toDto();
     }
 }

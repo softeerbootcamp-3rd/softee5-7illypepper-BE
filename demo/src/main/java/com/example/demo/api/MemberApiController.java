@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class MemberApiController {
     @Autowired
@@ -28,5 +30,14 @@ public class MemberApiController {
         return (result != null) ?
                 ResponseEntity.status(HttpStatus.OK).body(result):
                 ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
+    }
+
+    @PostMapping("/user/favorite")
+    public ResponseEntity<MemberDto> favorite(@RequestParam(value = "dto") MemberDto dto,
+                                              @RequestParam(value = "category") List<String> category) {
+        MemberDto result = memberService.favorite(dto, category);
+        return (result != null) ?
+                ResponseEntity.status(HttpStatus.OK).body(result):
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 }

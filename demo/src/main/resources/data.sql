@@ -55,4 +55,4 @@ INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, 
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('밝은 길', 400, 25, 0, 0, 127.0349669, 37.484057);
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('불편한 길', 300, 20, 0, 0, 127.0349669, 37.484057);
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('쉬운 길', 300, 20, 0, 0, 127.0349669, 37.484057);
-INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('복잡한 길', 300, 20, 0, 0, 127.0349669, 37.484057);
+INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('커피향이 솔솔나는 카페거리', 500, 30, 100, 200, 127.02921073842579, 37.48643420525921);

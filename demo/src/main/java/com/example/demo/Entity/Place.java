@@ -32,8 +32,10 @@ public class Place {
 
     private double axisY;
 
+    private Long size;
+
     public PlaceDto toDto() {
         return new PlaceDto(id, categoryId, name, thumbnail,
-                content, rating, axisX, axisY);
+                content, rating, axisX, axisY, size);
     }
 }

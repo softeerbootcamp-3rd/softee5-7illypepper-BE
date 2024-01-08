@@ -22,9 +22,6 @@ INSERT INTO theme (theme_id, name) values (4, '커피향이 솔솔');
 INSERT INTO theme (theme_id, name) values (5, '숲');
 INSERT INTO theme (theme_id, name) values (6, '다른 사람들이 좋아한');
 
-
-INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '양재역', null, '양재역', 0, 127.034022, 37.484557);
-INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '힐튼 가든', null, '힐튼 가든 인 서울', 0, 127.0327635, 37.4858831);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (5, '에버모어 엔터테인먼트', null, '엔터테인먼트', 0, 127.03449720489127, 37.4860034618704);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (5, '아도바', null, '아도바', 0, 127.03083359101153, 37.48553144544011);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '던킨도넛', null, '던킨 양재역사점', 0, 127.034883, 37.4842959);
@@ -38,14 +35,21 @@ INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) 
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '원썸', null, '카페', 0, 127.03496072170815, 37.4858659218668);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '커피에스페란토', null, '카페', 0, 127.035642012737, 37.48598059685432);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '카페253', null, '카페', 0, 127.03297078508234, 37.48601516030119);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '임병주 산동 칼국수', null, '칼국수 전문점', 0, 127.0300332558638, 37.48458108775617);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '버거킹', null, '버거킹 양재점', 0, 127.0337427, 37.4840618);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '명동칼국수', null, '명동칼국수', 0, 127.0348679, 37.4848342);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '미가참치', null, '참치 전문점', 0, 127.03578528972862, 37.484124476312374);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '태국식당356', null, '태국 음식 전문점', 0, 127.03662196026048, 37.48409268464161);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '어거스트치킨', null, '치킨전문점', 0, 127.0349669, 37.484057);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '메기대감', null, '메기 전문점', 0, 127.03610721251648, 37.48347114716664);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '전주콩나루 콩나무국밥', null, '국밥 전문점', 0, 127.03055900067797, 37.48454716512684);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '포케', null, '포케', 0, 127.03120637275119, 37.48470917743217);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (12, '토니모리', null, '토니모리', 0, 127.02998229048826, 37.48437386946961);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '올리브영', null, '올리브영', 0, 127.03618149968165, 37.48511996995919);
-
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '양재역', null, '양재역', 0, 127.034022, 37.484557);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '힐튼 가든', null, '힐튼 가든 인 서울', 0, 127.0327635, 37.4858831);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '호텔 신트라', null, '호텔 신트라', 0, 127.02921073842579, 37.484684909945514);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '호텔 페이토', null, '호텔 페이토', 0, 127.03269677651834, 37.48643420525921);
 
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('편안한 길', 300, 20, 0, 0, 127.0349669, 37.484057);
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('밝은 길', 400, 25, 0, 0, 127.0349669, 37.484057);

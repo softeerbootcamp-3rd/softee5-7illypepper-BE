@@ -33,6 +33,5 @@ public class RouteApiController {
                                                  @RequestParam List<String> theme) {
         List<RouteDto> result = routeService.findRoute(dto, time, theme);
         return ResponseEntity.status(HttpStatus.OK).body(result);
-
     }
 }

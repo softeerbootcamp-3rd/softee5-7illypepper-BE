@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/softee5-7illypepper-BE-main.iml" filepath="$PROJECT_DIR$/.idea/softee5-7illypepper-BE-main.iml" />
     </modules>
   </component>
 </project>

@@ -17,35 +17,10 @@ public class MemberService {
 
     @Transactional
     public MemberDto create(MemberDto dto) {
-        //BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        //String encodedPassword = passwordEncoder.encode(dto.getPassword());
         Member member = dto.toEntity();
         Member Created = memberRepository.save(member);
         return Created.toDto();
     }
-    public List<MemberDto> index() {
-        List<Member> memberEntityList = memberRepository.findAll();
-        List<MemberDto> dtos = new ArrayList<>();
-        for(int i=0; i<memberEntityList.size(); i++) {
-            dtos.add(memberEntityList.get(i).toDto());
-        }
-        return dtos;
-    }
-    public MemberDto login(String phone, String password) {
-        Member member = memberRepository.findByPhone(phone).orElse(null);
-        if(member != null) {
-            if(member.getPassword().equals(password)) {
-                return member.toDto();
-            }
-            else {
-                return null;
-            }
-        }
-        else {
-            return null;
-        }
-    }
-
     @Transactional
     public MemberDto update(MemberDto memberDto) {
         Member member = memberDto.toEntity();
@@ -58,6 +33,12 @@ public class MemberService {
     public MemberDto findByPhone(String phone) {
         Member memberEntity = memberRepository.findByPhone(phone).orElse(null);
         if(memberEntity != null) return memberEntity.toDto();
+        else return null;
+    }
+
+    public MemberDto show(Long memberId) {
+        Member member = memberRepository.findById(memberId).orElse(null);
+        if(member != null) return member.toDto();
         else return null;
     }
 }

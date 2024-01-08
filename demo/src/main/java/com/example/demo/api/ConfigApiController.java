@@ -6,9 +6,7 @@ import com.example.demo.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ConfigApiController {
@@ -16,8 +14,17 @@ public class ConfigApiController {
     private MemberService memberService;
 
     @PatchMapping("/config")
-    public ResponseEntity<Member> create(@RequestBody MemberDto memberDto) {
-        Member created = memberService.update(memberDto).toEntity();
-        return ResponseEntity.status(HttpStatus.OK).body(created);
+    public ResponseEntity<MemberDto> create(@RequestBody MemberDto memberDto) {
+        MemberDto result = memberService.update(memberDto);
+        return (result != null) ?
+                ResponseEntity.status(HttpStatus.OK).body(result):
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+    @GetMapping("/config/{memberId}")
+    public ResponseEntity<MemberDto> show(@PathVariable Long memberId) {
+        MemberDto dto = memberService.show(memberId);
+        return (dto != null)?
+                ResponseEntity.status(HttpStatus.OK).body(dto):
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 }

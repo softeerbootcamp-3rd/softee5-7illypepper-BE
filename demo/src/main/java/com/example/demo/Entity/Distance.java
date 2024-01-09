@@ -12,7 +12,11 @@ import lombok.Setter;
 public class Distance {
     private double axisX;
     private double axisY;
-    public static double getDist(double x1, double y1, double x2, double y2) {
+    public static double getDist(Distance here, Distance there) {
+        double x1 = here.axisX;
+        double y1 = here.axisY;
+        double x2 = there.axisX;
+        double y2 = there.axisY;
         double theta = x1 - x2;
         double dist = Math.sin(deg2rad(y1))* Math.sin(deg2rad(y2)) + Math.cos(deg2rad(y1))*Math.cos(deg2rad(y2))*Math.cos(deg2rad(theta));
         dist = Math.acos(dist);

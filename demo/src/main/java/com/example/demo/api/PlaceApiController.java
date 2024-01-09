@@ -6,9 +6,7 @@ import com.example.demo.service.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,9 +15,12 @@ public class PlaceApiController {
     @Autowired
     private PlaceService placeService;
 
-    @PostMapping("/find")
-    public ResponseEntity<List<PlaceDto>> find(@RequestBody MemberDto dto) {
-        List<PlaceDto> dtos = placeService.findSurround(dto, 200, 100, 200);
+    @GetMapping("/find")
+    public ResponseEntity<List<PlaceDto>> find(@RequestParam(name = "meter") Long meter,
+                                               @RequestParam(name = "count") Long count,
+                                               @RequestParam(name = "y") Double y,
+                                               @RequestParam(name = "x") Double x) {
+        List<PlaceDto> dtos = placeService.findSurround(meter, count, y, x);
         return ResponseEntity.status(HttpStatus.OK).body(dtos);
     }
 }

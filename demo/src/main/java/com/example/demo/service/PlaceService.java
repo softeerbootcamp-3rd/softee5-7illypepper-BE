@@ -19,18 +19,22 @@ public class PlaceService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    public List<PlaceDto> findSurround(MemberDto dto, double meter, int small, int big) {
+    public List<PlaceDto> findSurround(Long meter, Long count, Double y, Double x) {
         List<Place> places = placeRepository.findAll();
         List<PlaceDto> dtos = new ArrayList<>();
-        Distance now = new Distance(dto.getAxisX(), dto.getAxisY());
-        for(Place p : places) {
-            Distance d = new Distance(p.getAxisX(), p.getAxisY());
-            double dist = now.getDist(now.getAxisX(), now.getAxisY(), d.getAxisX(), d.getAxisY());
-            if(dist  > (double)meter) continue;
-            PlaceDto pdto = p.toDto();
-            if(dist <= (double)small) pdto.setSize(1L);
-            else pdto.setSize(0L);
-            dtos.add(pdto);
+        Distance here = new Distance(x, y);
+        for(Place place : places) {
+            Distance there = new Distance(place.getAxisX(), place.getAxisY());
+            double dist = Distance.getDist(here, there);
+            for(long i=1; i<=count; i++) {
+                double length = (double)i*meter;
+                if(dist <= length) {
+                    PlaceDto pdto = place.toDto();
+                    pdto.setSize(i);
+                    dtos.add(pdto);
+                    break;
+                }
+            }
         }
         return dtos;
     }

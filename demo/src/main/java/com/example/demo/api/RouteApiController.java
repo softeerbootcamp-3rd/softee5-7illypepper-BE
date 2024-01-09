@@ -3,9 +3,7 @@ package com.example.demo.api;
 import com.example.demo.Entity.Place;
 import com.example.demo.Entity.Route;
 import com.example.demo.Entity.RouteTheme;
-import com.example.demo.dto.MemberDto;
-import com.example.demo.dto.RouteDto;
-import com.example.demo.dto.ThemeDto;
+import com.example.demo.dto.*;
 import com.example.demo.repository.RouteThemeRepository;
 import com.example.demo.service.RouteService;
 import jakarta.persistence.GeneratedValue;
@@ -26,10 +24,8 @@ public class RouteApiController {
     private RouteThemeRepository routeThemeRepository;
 
     @PostMapping("/course/rate")
-    public ResponseEntity<RouteDto> rate(@RequestParam MemberDto dto,
-                                         @RequestParam Long routeId,
-                                         @RequestParam Long score){
-        RouteDto result = routeService.rating(dto, routeId, score);
+    public ResponseEntity<RouteDto> rate(@RequestBody RateDto dto){
+        RouteDto result = routeService.rating(dto.getMemberId(), dto.getRouteId(), dto.getScore());
         return (result != null) ?
                 ResponseEntity.status(HttpStatus.OK).body(result):
                 ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
@@ -56,5 +52,12 @@ public class RouteApiController {
             if(Objects.equals(r.getRouteId(), courseId)) result.add(new ThemeDto(null, r.getTheme()));
         }
         return ResponseEntity.status(HttpStatus.OK).body(result);
+    }
+    @PostMapping("/course/theme/create")
+    public ResponseEntity<RouteDto> createRouteTheme(@RequestBody RouteThemeDto dto) {
+        RouteDto result = routeService.createRouteTheme(dto.getRouteId(), dto.getThemeId());
+        return (result != null) ?
+                ResponseEntity.status(HttpStatus.OK).body(result):
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 }

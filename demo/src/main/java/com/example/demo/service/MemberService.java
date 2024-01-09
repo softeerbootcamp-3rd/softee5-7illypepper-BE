@@ -30,9 +30,9 @@ public class MemberService {
         return Created.toDto();
     }
     @Transactional
-    public MemberDto update(MemberDto memberDto) {
+    public MemberDto update(MemberDto memberDto, Long id) {
         Member member = memberDto.toEntity();
-        Member target = memberRepository.findById(memberDto.getId()).orElse(null);
+        Member target = memberRepository.findById(id).orElse(null);
         if(target == null) return null;
         target.patch(member);
         return target.toDto();

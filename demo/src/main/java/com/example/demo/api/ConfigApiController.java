@@ -13,9 +13,10 @@ public class ConfigApiController {
     @Autowired
     private MemberService memberService;
 
-    @PatchMapping("/config")
-    public ResponseEntity<MemberDto> create(@RequestBody MemberDto memberDto) {
-        MemberDto result = memberService.update(memberDto);
+    @PatchMapping("/config/{memberId}")
+    public ResponseEntity<MemberDto> create(@RequestBody MemberDto memberDto,
+                                            @PathVariable Long memberId) {
+        MemberDto result = memberService.update(memberDto, memberId);
         return (result != null) ?
                 ResponseEntity.status(HttpStatus.OK).body(result):
                 ResponseEntity.status(HttpStatus.BAD_REQUEST).build();

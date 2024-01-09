@@ -1,15 +1,14 @@
 package com.example.demo.api;
 
 import com.example.demo.Entity.Member;
+import com.example.demo.dto.FavoriteDto;
 import com.example.demo.dto.MemberDto;
 import com.example.demo.service.MemberService;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,26 +17,25 @@ public class MemberApiController {
     @Autowired
     private MemberService memberService;
 
-    @PostMapping("/user/signin")
+    @PostMapping("/member/signin")
     public ResponseEntity<Member> create(@RequestBody MemberDto memberDto) {
         Member created = memberService.create(memberDto).toEntity();
         return ResponseEntity.status(HttpStatus.OK).body(created);
     }
 
-    @PostMapping("/user/check")
-    public ResponseEntity<MemberDto> check(@RequestParam(value = "phone") String phone) {
+    @GetMapping("/member/check/{phone}")
+    public ResponseEntity<MemberDto> check(@PathVariable String phone) {
         MemberDto result = memberService.findByPhone(phone);
         return (result != null) ?
                 ResponseEntity.status(HttpStatus.OK).body(result):
                 ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
     }
 
-//    @PostMapping("/user/favorite")
-//    public ResponseEntity<MemberDto> favorite(@RequestParam(value = "dto") MemberDto dto,
-//                                            @RequestParam(value = "category") String[] category) {
-//        MemberDto result = memberService.favorite(dto, category);
-//        return (result != null) ?
-//                ResponseEntity.status(HttpStatus.OK).body(result):
-//                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-//    }
+    @PostMapping("/member/favorite")
+    public ResponseEntity<MemberDto> favorite(@RequestBody FavoriteDto dto) {
+        MemberDto result = memberService.favorite(dto.getMemberId(), dto.getCategory());
+        return (result != null) ?
+                ResponseEntity.status(HttpStatus.OK).body(result):
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
 }

@@ -92,10 +92,14 @@ INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) 
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '스포타임', null, '온천 스포츠 센터', 0, 127.03486319434946, 37.482811531949444);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '무지개쇼핑센터', null, '무지개 쇼핑센터', 0, 127.02600507989865, 37.49219781211533);
 
---양재시민의 숲 역 x = 127.03852553920082    y = 37.47000929951769
+-- 시작지점 : 양재시민의 숲 역              x =   127.03852553920082    y = 37.47000929951769
+-- 중간지점 : 대한항공 희생자위령탑           x =   127.03750974228132    y = 37.4675611293541
+-- 도착지점 : 로사식물원                   x =   127.04101042033751    y = 37.46617240915168
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (1, '서초구립 양재도서관', null, '도서관', 0, 127.03371715005215, 37.47368463922713);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (2, '에프홀', null, '에프홀', 0, 127.04150875921552, 37.47303568424443);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (2, '이디엠하우스', null, '이디엠하우스', 0, 127.03962000344856, 37.47144830196575);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (3, '충현정묘', null, '충현정묘', 0, 127.02496988644536, 37.47361473065822);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (3, '매헌윤봉길의사 동상', null, '매헌윤봉길의사 동상', 0, 127.03581209100912, 37.469208253482726);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (3, '매헌윤봉길의사 기념관', null, '매헌윤봉길의사 기념관', 0, 127.03662335725926, 37.46957967176886);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (3, '대한항공 희생자위령탑', null, '대한항공 희생자위령탑', 0, 127.03750974228132, 37.4675611293541);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (3, '삼풍참사 위령탑', null, '삼풍참사 위령탑', 0, 127.03798403462126, 37.46661491618845);
@@ -104,6 +108,7 @@ INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) 
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (5, 'SCC선아트홀', null, '양재시민의숲 문화예술공원', 0, 127.03065675534877, 37.467824399158445);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (5, '문화예술공원', null, '양재시민의숲 문화예술공원', 0, 127.03065675534877, 37.467824399158445);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (5, '더케이아트홀', null, '더케이아트홀', 0, 127.03368542445897, 37.4659674916461);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '리블리케이크', null, '카페', 0, 127.04271297537754, 37.47346548743043);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '앨리스토리 커피볶는집', null, '카페', 0, 127.04027000842107, 37.476691960618936);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '카페라시따', null, '카페', 0, 127.03621335089446, 37.463259204475676);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '커피나무', null, '카페', 0, 127.03505513273302, 37.46407947431685);
@@ -115,10 +120,14 @@ INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) 
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '백체김치찌개', null, '백채김치찌개', 0, 127.04094708536884, 37.46922010083652);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '장터족발 보쌈전문점', null, '족발,보쌈 전문점', 0, 127.04243115685728, 37.46989083023926);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '싱싱오징어', null, '오징어전문점', 0, 127.04235469187701, 37.46960703930556);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (9, '양재 탁구 클럽', null, '양재 탁구 클럽', 0, 127.04133640794186, 37.47312359315589);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (9, '양재천근린공원 족구장', null, '양재천근린공원 족구장', 0, 127.03971186241922, 37.4741355341376);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (9, '매헌실내 테니스장', null, '매헌실내 테니스장', 0, 127.03691620183203, 37.47315208709664);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (9, '갤럭시아 골프클럽', null, '갤럭시아 골프클럽', 0, 127.03390542194533, 37.46502136680134);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (9, '운동장', null, '양재시민의숲 운동장', 0, 127.03711362126673, 37.47230958067453);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (12, '민우농원', null, '민우농원', 0, 127.04004734765115, 37.467262962957435);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (12, '양지암', null, '양지암', 0, 127.03451588330435, 37.46515634178515);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (12, '스마트도서관', null, '스마트도서관', 0, 127.04320335126654, 37.47105060154832);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (12, '자연학습장', null, '자연학습장', 0, 127.03700233252283, 37.47014493790918);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (12, '농원방농장', null, '농원방농장', 0, 127.03979207105718, 37.465497067225854);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (12, '현대기아자동차빌딩', null, '현대기아자동차빌딩', 0, 127.04275304564544, 37.46442382948179);
@@ -129,13 +138,17 @@ INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) 
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '우면생태놀이터', null, '우면생태놀이터' , 0, 127.02909889217734, 37.47325338191371);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '연인의 거리', null, '연인의 거리' , 0, 127.04202034345894, 37.4781509865291);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '양재천 카페거리', null, '양재천 카페거리' , 0, 127.04027000842107, 37.476691960618936);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '주암 체육 소공원', null, '주암 체육 소공원' , 0, 127.0319877787209, 37.46110700545681);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '양재천 근린 공원', null, '양재천 근린 공원' , 0, 127.04173935561491, 37.47604272374167);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '동문 어린이 공원', null, '동문 어린이 공원' , 0, 127.0267698838443, 37.47271332637031);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '바우뫼 어린이공원', null, '바우뫼 어린이공원' , 0, 127.0234088713014, 37.47064171600808);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '어린이놀이터', null, '양재시민의숲 어린이놀이터' , 0, 127.0317651835401, 37.46930176426534);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '개뜰 어린이공원', null, '개뜰 어린이공원', 0, 127.0411503363458, 37.47396159750462);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '반려견놀이터', null, '양재시민의숲 반려견놀이터', 0, 127.03326954646617, 37.471301593881186);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '양재근린공원', null, '양재근린공원', 0, 127.04243498763677, 37.471668072130946);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '지압보도', null, '양재시민의숲 지압보도', 0, 127.03732480868868, 37.470746261060555);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (14, '응머리산', null, '응머리산', 0, 127.03144712040763, 37.46562121913833);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (14, '매헌교', null, '매헌교', 0, 127.03774434450396, 37.473266704263146);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (14, '여의교', null, '여의교', 0, 127.03818327970754, 37.46941924859807);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (14, '응머리산', null, '응머리산', 0, 127.03147820958036, 37.46563022097433);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (14, '양재화훼', null, '양재화훼', 0, 127.04601768433677, 37.46099425357032);
@@ -156,4 +169,4 @@ INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, 
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('쉬운 길', 300, 20, 0, 0, 127.0349669, 37.484057);
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('커피향이 솔솔나는 카페거리', 500, 30, 100, 200, 127.02921073842579, 37.48643420525921);
 
-INSERT INTO member (phone, nickname, password, name, birth, gender, job, axisX, axisY) values ('010-8850-5868', 'binaryrain97', '123', '이진우', null, '남성', '학생', 0, 0);
+INSERT INTO member (phone, nickname, password, name, birth, gender, job, axisX, axisY) values ('01088505868', 'binaryrain97', '123', '이진우', null, '남성', '학생', 0, 0);

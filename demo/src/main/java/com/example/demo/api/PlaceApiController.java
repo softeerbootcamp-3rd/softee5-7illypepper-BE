@@ -23,4 +23,14 @@ public class PlaceApiController {
         List<PlaceDto> dtos = placeService.findSurround(meter, count, y, x);
         return ResponseEntity.status(HttpStatus.OK).body(dtos);
     }
+
+    @GetMapping("/findfind")
+    public ResponseEntity<List<PlaceDto>> find(@RequestParam(name = "memberId") Long memberId,
+                                                @RequestParam(name = "meter") Long meter,
+                                               @RequestParam(name = "count") Long count,
+                                               @RequestParam(name = "y") Double y,
+                                               @RequestParam(name = "x") Double x) {
+        List<PlaceDto> dtos = placeService.findSurround(memberId, meter, count, y, x);
+        return ResponseEntity.status(HttpStatus.OK).body(dtos);
+    }
 }

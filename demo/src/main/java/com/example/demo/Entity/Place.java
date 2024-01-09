@@ -15,7 +15,7 @@ import lombok.ToString;
 public class Place {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JoinColumn(name="place_id")
+    @JoinColumn(name = "place_id")
     private Long id;
 
     private Long categoryId;

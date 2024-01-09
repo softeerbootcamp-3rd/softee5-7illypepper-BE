@@ -4,6 +4,7 @@ import com.example.demo.Entity.Distance;
 import com.example.demo.Entity.Place;
 import com.example.demo.dto.MemberDto;
 import com.example.demo.dto.PlaceDto;
+import com.example.demo.repository.CategoryRepository;
 import com.example.demo.repository.PlaceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,8 @@ import java.util.List;
 public class PlaceService {
     @Autowired
     private PlaceRepository placeRepository;
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     public List<PlaceDto> findSurround(MemberDto dto, double meter, int small, int big) {
         List<Place> places = placeRepository.findAll();

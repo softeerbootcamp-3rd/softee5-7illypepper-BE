@@ -50,9 +50,8 @@ public class MemberService {
         else return null;
     }
 
-    public MemberDto favorite(MemberDto dto, List<String> like) {
-        if(dto.getId() == null) return null;
-        Member target = memberRepository.findById(dto.getId()).orElse(null);
+    public MemberDto favorite(Long id, String[] like) {
+        Member target = memberRepository.findById(id).orElse(null);
         if(target == null) return null;
         for(String l : like) {
             Category c = categoryRepository.findByName(l).orElse(null);

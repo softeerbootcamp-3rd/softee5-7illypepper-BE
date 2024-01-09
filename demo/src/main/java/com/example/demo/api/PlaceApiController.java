@@ -19,7 +19,7 @@ public class PlaceApiController {
 
     @PostMapping("/find")
     public ResponseEntity<List<PlaceDto>> find(@RequestBody MemberDto dto) {
-        List<PlaceDto> dtos = placeService.findSurround(dto, 100, 50, 100);
+        List<PlaceDto> dtos = placeService.findSurround(dto, 200, 100, 200);
         return ResponseEntity.status(HttpStatus.OK).body(dtos);
     }
 }

@@ -1,19 +1,18 @@
 package com.example.demo.Entity;
 
 import jakarta.persistence.*;
-import lombok.Cleanup;
+import lombok.*;
 
 @Entity
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class RouteTheme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "route_id")
-    private Route route;
+    private Long routeId;
 
-    @ManyToOne
-    @JoinColumn(name = "theme_id")
-    private Theme theme;
+    private String theme;
 }

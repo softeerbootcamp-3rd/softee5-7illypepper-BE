@@ -33,8 +33,10 @@ INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) 
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '에이미스커피', null, '카페', 0, 127.03127994019968, 37.48488710714014);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '일생과일푸르츠', null, '카페', 0, 127.03239949626116, 37.48533730961639);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '원썸', null, '카페', 0, 127.03496072170815, 37.4858659218668);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '베이크팡', null, '베이커리', 0, 127.03517290111132, 37.48624202982043);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '커피에스페란토', null, '카페', 0, 127.035642012737, 37.48598059685432);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '카페253', null, '카페', 0, 127.03297078508234, 37.48601516030119);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (6, '커피플란트카페', null, '카페', 0, 127.03563646630879, 37.48620585057903);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '임병주 산동 칼국수', null, '칼국수 전문점', 0, 127.0300332558638, 37.48458108775617);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '버거킹', null, '버거킹 양재점', 0, 127.0337427, 37.4840618);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '명동칼국수', null, '명동칼국수', 0, 127.0348679, 37.4848342);
@@ -44,7 +46,16 @@ INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) 
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '메기대감', null, '메기 전문점', 0, 127.03610721251648, 37.48347114716664);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '전주콩나루 콩나무국밥', null, '국밥 전문점', 0, 127.03055900067797, 37.48454716512684);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (8, '포케', null, '포케', 0, 127.03120637275119, 37.48470917743217);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (9, '양재역 체육관', null, '체육관', 0, 127.0337948591543, 37.48307088235425);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (9, '블루아짐', null, '체육관', 0, 127.03457622100062, 37.48571736865493);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (9, '양재역 테니스장', null, '테니스코트', 0, 127.03043085095469, 37.48220457575363);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (9, '양재역 배트민턴장', null, '체육 공원', 0, 127.03408865997903, 37.48270588942935);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (12, '토니모리', null, '토니모리', 0, 127.02998229048826, 37.48437386946961);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '양재역터', null, '쉼터', 0, 127.03407796847864, 37.48405965797228);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '양재역 공원', null, '쉼터', 0, 127.03374536420911, 37.486147840316974);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (13, '놀이터', null, '놀이터', 0, 127.03444952830606, 37.486825645727876);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (14, '블레스트 플라워마켓', null, '꽃가게', 0, 127.03447919391392, 37.48371715831822);
+INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (14, '가로수', null, '가로수', 0, 127.03374285256753, 37.486848374870426);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '올리브영', null, '올리브영', 0, 127.03618149968165, 37.48511996995919);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '양재역', null, '양재역', 0, 127.034022, 37.484557);
 INSERT INTO place (category_id, name, thumbnail, content, rating, axisX, axisY) values (15, '힐튼 가든', null, '힐튼 가든 인 서울', 0, 127.0327635, 37.4858831);
@@ -56,3 +67,5 @@ INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, 
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('불편한 길', 300, 20, 0, 0, 127.0349669, 37.484057);
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('쉬운 길', 300, 20, 0, 0, 127.0349669, 37.484057);
 INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, axisY) values ('커피향이 솔솔나는 카페거리', 500, 30, 100, 200, 127.02921073842579, 37.48643420525921);
+
+INSERT INTO member (phone, nickname, password, name, birth, gender, job, axisX, axisY) values ('010-8850-5868', 'binaryrain97', '123', '이진우', null, '남성', '학생', 0, 0);

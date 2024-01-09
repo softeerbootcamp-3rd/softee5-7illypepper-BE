@@ -32,12 +32,12 @@ public class MemberApiController {
                 ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
     }
 
-    @PostMapping("/user/favorite")
-    public ResponseEntity<MemberDto> favorite(@RequestParam(value = "dto") MemberDto dto,
-                                              @RequestParam(value = "category") List<String> category) {
-        MemberDto result = memberService.favorite(dto, category);
-        return (result != null) ?
-                ResponseEntity.status(HttpStatus.OK).body(result):
-                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-    }
+//    @PostMapping("/user/favorite")
+//    public ResponseEntity<MemberDto> favorite(@RequestParam(value = "dto") MemberDto dto,
+//                                            @RequestParam(value = "category") String[] category) {
+//        MemberDto result = memberService.favorite(dto, category);
+//        return (result != null) ?
+//                ResponseEntity.status(HttpStatus.OK).body(result):
+//                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+//    }
 }

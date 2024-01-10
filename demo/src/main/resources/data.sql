@@ -187,6 +187,6 @@ INSERT INTO route (name, length, estimated_time, rate_total, rate_count, axisX, 
 
 INSERT INTO member (phone, nickname, password, name, birth, gender, job, axisX, axisY) values ('01088505868', 'binaryrain97', '123', '이진우', null, '남성', '학생', 0, 0);
 
-INSERT INTO member_category (member_id, category_id) values (1, 4);
+INSERT INTO member_category (member_id, category_id) values (1, 9);
 INSERT INTO member_category (member_id, category_id) values (1, 1);
 INSERT INTO member_category (member_id, category_id) values (1, 16);

@@ -55,7 +55,7 @@ public class MemberService {
         if(target == null) return null;
         for(String l : like) {
             Category c = categoryRepository.findByName(l).orElse(null);
-            if(c == null) return null;
+            if(c == null) continue;
             memberCategoryRepository.save(new MemberCategory(null, target, c));
         }
         return target.toDto();
